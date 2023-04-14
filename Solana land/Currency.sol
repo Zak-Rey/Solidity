@@ -2,6 +2,7 @@
 pragma solidity ^0.8.4;
 
 contract Coin {
+    //The keyword "public" make the variable accessible from other variables
     address public minter;
      mapping(address => uint) public balances;
 
