@@ -8,6 +8,7 @@ contract Coin {
 
     event Sent(address from, address to, uint amount);
 
+    //Constructor code is only run when the contract is created
     constructor() {
         minter = msg.sender;
     }
@@ -18,6 +19,7 @@ contract Coin {
         balances[receiver] += amount;
     }
 
+    //allows you to provide information about why an operation failed, errors are returned to the caller of the function.
     error insufficientBalance (uint requested, uint available);
 
     //Sends an amount of existing coins from any caller to an address
