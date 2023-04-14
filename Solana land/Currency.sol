@@ -19,11 +19,11 @@ contract Coin {
     error insufficientBalance (uint requested, uint available);
 
     //Sends an amount of existing coins from any caller to an address
-    function send(addres receiver, uint amount) {
+    function send(address receiver, uint amount) public{
         if(amount > balances[msg.sender])
             revert insufficientBalance({
                 requested: amount,
-                available: balance[msg.sender]
+                available: balances[msg.sender]
             });
         
         balances[msg.sender] -= amount;
