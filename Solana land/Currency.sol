@@ -19,7 +19,7 @@ contract Coin {
         balances[receiver] += amount;
     }
 
-    //allows you to provide information about why an operation failed, errors are returned to the caller of the function.
+    //allows you to provide information about why an operation failed, errors are returned to the caller of the function.git 
     error insufficientBalance (uint requested, uint available);
 
     //Sends an amount of existing coins from any caller to an address
